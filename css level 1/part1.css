@@ -1,0 +1,14 @@
+/* select :target{
+
+    property: value;
+} */
+h1{
+color: blue;
+}
+li
+{
+    color: rgb(6, 42, 210);
+}
+p{
+ color: #080880;
+}

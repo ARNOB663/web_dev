@@ -1,0 +1,18 @@
+body{
+background: url(css.png);
+}
+div{
+
+    background-color: rgb(13, 82, 66);
+    border-color: rgb(4, 4, 63);
+    border-width: 5px ;
+    border-style: double;
+
+}
+p{
+    color: yellow;
+}
+span{
+    background:  red;
+    color: black;
+}
