@@ -35,5 +35,10 @@ a{
     color: purple;
 }
  .exit{
-    
+    background-color: blue;
+    border: 4px dashed yellow\
+
+}
+a:visited{
+    color: green;
 }
