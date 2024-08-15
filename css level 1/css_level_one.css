@@ -1,0 +1,39 @@
+body{
+     background-color: rgb(155, 212, 228);
+}
+h1{
+   border: 3px solid black;
+}
+#p1{
+    background-color: rgb(243, 199, 140);
+}
+h2{
+   color: rgb(102, 4, 119);
+}
+#li1{
+    color: rgb(255, 0, 0);
+}
+input{
+    border: 2px solid;
+}
+div p{
+
+    background: #fffca5;
+}
+#textblock{
+
+    border:  5px solid gray;
+
+    width: 300px;
+     height: 400px;
+}
+a{
+    color: red;
+}
+#item1{
+    text-decoration: overline;
+    color: purple;
+}
+ .exit{
+    
+}
