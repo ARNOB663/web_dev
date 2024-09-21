@@ -17,3 +17,15 @@ body{
     text-align: center;
     font-weight: bold;
 }
+button{
+
+    background-color: rgb(1, 1, 13);
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
