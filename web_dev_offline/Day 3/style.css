@@ -1,7 +1,7 @@
 body{
 
-background-color: black;
-
+background-color: #1c1c1c;
+color: #f2f2f2;
 
 }
 
@@ -31,10 +31,18 @@ background-color: black;
     background-color: #010e09;
     color: white;
   }
-  #h1{
+  h2{
+    text-align: center;
+    color: #ddd;
+  }
+  h1{
+text-align: center;
+    color: #ddd;
+    
+  }
+  form{
 
-text;
+color: #ddd;
 
   }
-
   
