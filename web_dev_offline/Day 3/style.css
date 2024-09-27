@@ -44,7 +44,11 @@ text-align: center;
 color: #ddd;
 
   }
-  .img1{
+  #img1{
 
-    margin: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+
   }
