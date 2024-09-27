@@ -22,7 +22,7 @@ color: #f2f2f2;
   /* Change the color of links on hover */
   .topnav a:hover {
     background-color: #ddd;
-    color: black;
+    color: rgb(0, 0, 0);
   }
   
   /* Add a color to the active/current link */
@@ -35,7 +35,6 @@ color: #f2f2f2;
     color: #ddd;
   }
   
-  
   .hero {
     background: url('pen1.avif') no-repeat center center/cover; 
     text-align: center;
@@ -43,7 +42,6 @@ color: #f2f2f2;
 }
 .products{
 
-  
   gap: 20px;
   display: flex;
   padding: 10px;
@@ -55,4 +53,11 @@ color: #f2f2f2;
   background-color: #13865a;
   padding: 20px;
   border-radius: 2%;
+}
+.form{
+
+  display: block;
+
+
+
 }
