@@ -30,15 +30,11 @@ color: #f2f2f2;
     background-color: #010e09;
     color: white;
   }
-  h2{
+  h2,h1,p,h3{
     text-align: center;
     color: #ddd;
   }
-  h1{
-text-align: center;
-    color: #ddd;
-    
-  }
+  
   
   .hero {
     background: url('pen1.avif') no-repeat center center/cover; 
