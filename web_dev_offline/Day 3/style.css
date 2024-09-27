@@ -45,3 +45,18 @@ text-align: center;
     text-align: center;
     padding: 100px 0;
 }
+.products{
+
+  
+  gap: 20px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+
+}
+
+.products-card{
+  background-color: #13865a;
+  padding: 20px;
+  border-radius: 2%;
+}
