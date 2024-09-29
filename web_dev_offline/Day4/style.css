@@ -1,0 +1,46 @@
+#logo{
+width: 100px;
+height: 30px;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    padding:10px;
+}
+
+body{
+    margin: 0%;
+    width: 100%;
+}
+.nav-link{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    background-color: #EEEDEB;
+    border-radius: 5px;
+}
+.nav-link:hover{
+    background-color: #E6B9A6;
+}
+.button{
+    padding: 10px;
+    background-color: #2F3645;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.button:hover{
+    background-color: #E6B9A6;
+}
+.hero-text{
+    text-align: center;
+ background: url('https://img.lazcdn.com/us/domino/e93e55f2-4173-4180-854b-867ae88f09eb_BD-1976-688.jpg_2200x2200q80.jpg_.webp')no-repeat center/cover ;
+    display: flex;
+    justify-content: center;
+    color: white;
+padding: 100px;
+}
+
+
+
