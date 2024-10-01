@@ -1,6 +1,9 @@
 
 
  
- function sum(a=4, b=6) {
-consloe.log(a+b);
+ function sum(a,b){
+    a=5;
+    b=10;
+    console.log(a+b);
 }
+sum();
