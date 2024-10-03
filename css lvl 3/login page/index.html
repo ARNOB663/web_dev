@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="style.css">
 <style>
 body{
+font-family: Arial, Helvetica, sans-serif;
     background-color: #1a1a1a;
     margin: 0%;
     padding: 0%;
@@ -14,14 +15,48 @@ body{
     display : flex;
     justify-content: center;
     align-items: center; 
+    color: rgb(226, 226, 226);
+    
 }
 .card{
     background-color: #757575;
     border-radius: 8px;
     padding: 30px;
+
     width: 300px;
 }
+h2{
+    color:  #10416f;
+    text-align: center;
+    margin-bottom: 80px;
 
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+input{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5%;
+    background-color: #3e3e3e;
+    border: none;
+    color: #fff';
+
+}
+button
+{
+    background-color: #1b81da;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10PX;
+
+}
+button:hover{
+    background-color: #10416f;
+
+}
 </style>
 </head>
 <body>
@@ -29,8 +64,7 @@ body{
     <div class="card">
         <h2>Login</h2>
         <form action="">
-
-            <input type="email" name="" id="" placeholder="email">
+            <input type="email" name="" id="" placeholder="Email">
             <input type="password" name="" id="" placeholder="password">
             <button type="submit">Login</button>
 
