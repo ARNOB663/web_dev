@@ -1,0 +1,32 @@
+body{
+
+background-color: antiquewhite;
+margin: 0%;
+padding: 0%;
+font-family: 'Arial', sans-serif;
+height: 100%;
+
+}
+
+.container{
+background:  linear-gradient(135deg, #71b7e6, #9b59b6); 
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+
+}
+.content{
+text-align: center;
+background-color: rgb(215, 215, 215);
+padding: 10px;
+align-items: center;
+
+}
+.logo
+{
+width: 150px;
+height: 100px;
+
+}
+
