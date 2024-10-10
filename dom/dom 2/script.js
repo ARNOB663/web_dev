@@ -11,7 +11,5 @@ document.getElementById("changeTextButton").addEventListener("click",()=>    { /
     //console.log(paragraph);// this will log the paragraph element
     //console.log(paragraph.innerHTML);//this will log the innerHTML of the paragraph
     paragraph.innerHTML="this paragraph is changed";//this will change the innerHTML of the paragraph
-
-    
     });
 
