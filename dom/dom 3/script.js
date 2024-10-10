@@ -8,7 +8,8 @@ document.getElementById("clickMeButton").addEventListener('mouseover', function(
 document.getElementById("tealist")
 .addEventListener('click', function(event){
 
-if(event.target && event.target.matches('teaItem')){
-    alert("chaicode");
+if(event.target && event.target.matches('.teaItem')){
+    alert("You selected: "+event.target.textContent);
+
 }
 });
