@@ -42,6 +42,7 @@ document.getElementById("coffeeList")
 
 document.getElementById("removeItem").addEventListener('click', function(){
     let coffeeList = document.getElementById("shoppingList");
-    coffeeList.removeChild(coffeeList.lastElementChild);//this will remove the last child of the coffeeList element
+    //coffeeList.removeChild(coffeeList.lastElementChild);//this will remove the last child of the coffeeList element
+    coffeeList.lastElementChild.remove();//this will remove the last child of the coffeeList element
 });
 
