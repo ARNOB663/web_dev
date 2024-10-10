@@ -7,7 +7,10 @@ console.log(this);
 
 });
 document.getElementById("changeTextButton").addEventListener("click",()=>    { //this is an event listener that listens for a click event on the button with the id of changeTextButton
-    document.getElementById("myParagraph")
+    let paragraph=document.getElementById("myParagraph");
+    console.log(paragraph);// this will log the paragraph element
+    console.log(paragraph.innerHTML);//this will log the innerHTML of the paragraph
+
     
     });
 
