@@ -13,3 +13,10 @@ if(event.target && event.target.matches('.teaItem')){
 
 }
 });
+//example 8
+document.getElementById("feedbackFrom").addEventListener('submit',function(event){
+
+alert("submited");
+
+
+})
