@@ -16,7 +16,9 @@ if(event.target && event.target.matches('.teaItem')){
 //example 8
 document.getElementById("feedbackFrom").addEventListener('submit',function(event){
 
-alert("submited");
+event.preventDefault();
+let feed=document.getElementById("feedbackInput").value;
+console.log(feed);
+document.getElementById("feedbackDisplay").textContent = `Feedback is: ${feed}`;
 
-
-})
+});
