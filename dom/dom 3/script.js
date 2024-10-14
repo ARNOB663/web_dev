@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function(){
 }
 );
 //example 10
-document.getElementById("clickMeButton").addEventListener('click', function(){
-    alert("You clicked me!");
+document.getElementById("togggHighlight").addEventListener('click', function(){
+    let descriptionText=document.getElementById("descriptionText");
+    descriptionText.classList.toggle("highlight");
 });
