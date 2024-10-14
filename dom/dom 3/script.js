@@ -22,3 +22,8 @@ console.log(feed);
 document.getElementById("feedbackDisplay").textContent = `Feedback is: ${feed}`;
 
 });
+//exmple 9
+document.addEventListener('DOMContentLoaded', function(){
+   document.getElementById("domStatus").textContent = "DOM is ready!";
+}
+);
