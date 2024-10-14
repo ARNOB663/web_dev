@@ -27,3 +27,7 @@ document.addEventListener('DOMContentLoaded', function(){
    document.getElementById("domStatus").textContent = "DOM is ready!";
 }
 );
+//example 10
+document.getElementById("clickMeButton").addEventListener('click', function(){
+    alert("You clicked me!");
+});
