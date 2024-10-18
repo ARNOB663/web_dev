@@ -248,8 +248,8 @@ text-align: center;
         right: 10px;
         width: 30px;
         height: 30px;
-       background-color: #333;
-        color: white;
+      
+        color: rgb(0, 0, 0);
         text-align: center;
         line-height: 30px;
         cursor: pointer;
