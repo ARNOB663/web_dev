@@ -113,3 +113,43 @@ const callback2 = function(email,password){
         console.log("Please enter your email and password");
     }
 }
+const add3=function(a){
+    return function(b){
+        return a+b;
+    }
+
+}
+const res = add3(2); //result is a function stored in result variable
+const ans= res(3)//result is a function stored in ans variable  this called closure property
+console.log(ans);
+//closure property
+const add4 = function(a){ //closure property
+    return function(b){  //closure property
+        return function(c){ //closure property
+            return a*b*c;
+        }
+    }
+}
+const result = add4(2)(3)(3); //
+// const result1 = result(3); //closure property
+// const result2 = result1(4);//
+console.log(result);
+//closuer property explaine in a simple way 
+// const add5 = function(a){
+//     return function(b){
+//         return a+b;
+//     }
+// }
+// const result = add5(2)(3);
+// console.log(result);
+//closure property
+const add5 = function(a){
+    return function(b){
+        return function(c){
+            return a+b+c;
+        }
+    }
+}
+const result5 = add5(2)(3)(4);//closure property
+
+
