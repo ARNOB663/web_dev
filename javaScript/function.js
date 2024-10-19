@@ -56,10 +56,11 @@ const add = function(a,b){//variable
 console.log(add(4,5));
 //arrow function
 
-
-const multiply = function(a,b,c,d){
-
+const multiply = function(a,b,c,d){//variable
     return a*b*c*d;
 }
 console.log(multiply(2,3,4,5));
+//arrow function
+
+//call back funtion
 
