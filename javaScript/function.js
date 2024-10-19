@@ -23,3 +23,4 @@ if(result>=80){
 cheak_result(90);
 cheak_result(80);
 cheak_result(70);
+cheak_result(60);
