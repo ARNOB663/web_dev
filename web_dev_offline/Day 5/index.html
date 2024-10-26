@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+#imp{
+background-color : red;
+color:white;
+}
+    </style>
+</head>
+<body>
+
+    <h1>Learn DOM with JavaScript</h1>
+    <input type="text" id="myInput" placeholder="Type something...">
+    <button id="myButton"><p id='imp'>hello</p><span>World</span></button>
+
+    <div id="output"></div>
+
+    <script>
+        // Get references to the input and output elements
+        const input = document.getElementById('myInput');
+        const button = document.getElementById('myButton');
+        const output = document.getElementById('output');
+
+        // Add a click event listener to the button
+        button.addEventListener('click', function() {
+            // Get the value from the input field
+            const text = input.value;
+            // Display the text in the output div
+            output.textContent = You typed: ${text};
+            // Clear the input field
+            input.value = '';
+        });
+    </script>
+</body>
+</html>
