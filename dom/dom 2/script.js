@@ -20,8 +20,8 @@ document.getElementById("changeTextButton").addEventListener("click",()=>    { /
 citiesList.firstElementChild.classList.add("highlight");//this will add the class of highlight to the first child of the citiesList element
 
     }); //this is an event listener that listens for a click event on the button with the id of highlightFirstCity
+                               
 //example 3
-
 document.getElementById("changeOrder").addEventListener("click", function(){
 
    let coffeeType = document.getElementById("coffeeType");
@@ -29,7 +29,6 @@ document.getElementById("changeOrder").addEventListener("click", function(){
    coffeeType.style.backgroundColor = "red";//this will change the color of the text
    coffeeType.style.padding = "5px";//this will change the color of the text
 });
-
 //example 4
 document.getElementById("addNewItem").addEventListener('click', function(){
  let NewItem= document.createElement("li");//this will create a new list item element
@@ -39,7 +38,6 @@ document.getElementById("coffeeList")
 
 });
 //example 5
-
 document.getElementById("removeItem").addEventListener('click', function(){
     let coffeeList = document.getElementById("shoppingList");
     //coffeeList.removeChild(coffeeList.lastElementChild);//this will remove the last child of the coffeeList element
