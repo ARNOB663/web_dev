@@ -9,6 +9,5 @@
     function  multiply(a,b){
         return a*b;
     }
-    module.exports = {
-     add,sub,multiply,
-    };
+//ES modules
+export default {add,sub,multiply};
