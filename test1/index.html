@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Enhanced Web App</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    main {
+      padding: 20px;
+    }
+    .intro, .features, .contact {
+      background: #e3f2fd;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    h2 {
+      color: #4CAF50;
+    }
+    .features ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+    .features ul li {
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background: #333;
+      color: white;
+      margin-top: 20px;
+    }
+    .button {
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Enhanced Web App</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="intro">
+      <h2>Introduction</h2>
+      <p>This enhanced web app demonstrates the power of HTML, CSS, and JavaScript. Explore its features and functionality!</p>
+    </section>
+    <section id="features" class="features">
+      <h2>Features</h2>
+      <ul>
+        <li>Responsive design for any screen size.</li>
+        <li>Interactive buttons and dynamic content.</li>
+        <li>Simple and clean layout.</li>
+      </ul>
+      <button class="button" onclick="showFeatureAlert()">Learn More</button>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+        <button type="submit" class="button">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 My Enhanced Web App</p>
+  </footer>
+  <script>
+   
+    function showFeatureAlert() {
+      alert("Explore responsive design, dynamic interactions, and clean layouts in this web app!");
+    }
+
+    
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert("Thank you for getting in touch! We'll respond to you shortly.");
+    });
+    console.log("Welcome to My Enhanced Web App!");
+  </script>
+</body>
+</html>
