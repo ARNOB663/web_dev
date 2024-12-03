@@ -6,13 +6,41 @@
     <title>Document</title>
 </head>
 <body>
+
+    <h1 id="mydata">Loading........</h1>
     
 
 <script>
- function getPrductListFromEnd()
+
+   getPrductListFromEnd();
+
+ async function getPrductListFromEnd()
  {
 
-let URL="https://crud.teamrabbil.com/api/v1/ReadProduct"
+    try{
+debugger;
+         
+        let mydata =document. getElementById("mydata")
+    mydata.innerText="Loading........"
+
+ let URL="https://crud.teamrabbil.com/api/v1/ReadProduct"
+ let result = await  fetch(URL)
+ let data= await result.json()
+
+
+ mydata.innerText=JSON.stringify(data)
+
+    }
+    catch(error)
+    {
+  let mydata =document. getElementById("mydata")
+    mydata.innerText="Error........"
+
+    }
+
+   
+
+
  }
 
 
