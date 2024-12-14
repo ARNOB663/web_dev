@@ -1,73 +1,88 @@
+<?php
+// Define variables for error messages and input values
+$name = $email = $age = "";
+$nameErr = $emailErr = $ageErr = "";
+$successMessage = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $isValid = true;
+
+    // Validate name
+    if (empty($_POST["name"])) {
+        $nameErr = "Name is required.";
+        $isValid = false;
+    } else {
+        $name = htmlspecialchars(trim($_POST["name"]));
+    }
+
+    // Validate email
+    if (empty($_POST["email"])) {
+        $emailErr = "Email is required.";
+        $isValid = false;
+    } elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+        $emailErr = "Invalid email format.";
+        $isValid = false;
+    } else {
+        $email = htmlspecialchars(trim($_POST["email"]));
+    }
+
+    // Validate age
+    if (empty($_POST["age"])) {
+        $ageErr = "Age is required.";
+        $isValid = false;
+    } elseif (!is_numeric($_POST["age"])) {
+        $ageErr = "Age must be a number.";
+        $isValid = false;
+    } else {
+        $age = htmlspecialchars(trim($_POST["age"]));
+    }
+
+    // Check if all fields are valid
+    if ($isValid) {
+        $successMessage = "Form submitted successfully!<br>Name: $name<br>Email: $email<br>Age: $age";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch API Example</title>
+    <title>PHP Form Validation</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            width: 80%;
-            max-width: 600px;
-            margin-top: 20px;
-        }
-        li {
-            background: #fff;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        #loading {
-            font-size: 18px;
-            color: #555;
-        }
+        .error { color: red; }
+        .success { color: green; }
     </style>
 </head>
 <body>
-    <h1>Post Titles</h1>
-    <div id="loading">Loading...</div>
-    <ul id="postList"></ul>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const loadingIndicator = document.getElementById('loading');
-            const postList = document.getElementById('postList');
+<h2>User Information Form</h2>
+<p><span class="error">* required field</span></p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<?php echo $name; ?>">
+    <span class="error">* <?php echo $nameErr; ?></span>
+    <br><br>
 
-            // Fetch data from the API
-            fetch('https://jsonplaceholder.typicode.com/posts')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    loadingIndicator.style.display = 'none'; // Hide loading indicator
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" value="<?php echo $email; ?>">
+    <span class="error">* <?php echo $emailErr; ?></span>
+    <br><br>
 
-                    // Populate the list with post titles
-                    data.forEach(post => {
-                        const listItem = document.createElement('li');
-                        listItem.textContent = post.title;
-                        postList.appendChild(listItem);
-                    });
-                })
-                .catch(error => {
-                    loadingIndicator.textContent = 'Failed to load posts.';
-                    console.error('There was a problem with the fetch operation:', error);
-                });
-        });
-    </script>
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age" value="<?php echo $age; ?>">
+    <span class="error">* <?php echo $ageErr; ?></span>
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<?php
+if (!empty($successMessage)) {
+    echo "<p class='success'>$successMessage</p>";
+}
+?>
+
 </body>
 </html>
