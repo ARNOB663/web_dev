@@ -1,88 +1,20 @@
-<?php
-// Define variables for error messages and input values
-$name = $email = $age = "";
-$nameErr = $emailErr = $ageErr = "";
-$successMessage = "";
+import React, { useState } from "react";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $isValid = true;
+function App() {
+  const [isVisible, setIsVisible] = useState(false);
 
-    // Validate name
-    if (empty($_POST["name"])) {
-        $nameErr = "Name is required.";
-        $isValid = false;
-    } else {
-        $name = htmlspecialchars(trim($_POST["name"]));
-    }
+  const toggleMessage = () => {
+    setIsVisible((prevState) => !prevState);
+  };
 
-    // Validate email
-    if (empty($_POST["email"])) {
-        $emailErr = "Email is required.";
-        $isValid = false;
-    } elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-        $emailErr = "Invalid email format.";
-        $isValid = false;
-    } else {
-        $email = htmlspecialchars(trim($_POST["email"]));
-    }
-
-    // Validate age
-    if (empty($_POST["age"])) {
-        $ageErr = "Age is required.";
-        $isValid = false;
-    } elseif (!is_numeric($_POST["age"])) {
-        $ageErr = "Age must be a number.";
-        $isValid = false;
-    } else {
-        $age = htmlspecialchars(trim($_POST["age"]));
-    }
-
-    // Check if all fields are valid
-    if ($isValid) {
-        $successMessage = "Form submitted successfully!<br>Name: $name<br>Email: $email<br>Age: $age";
-    }
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <button onClick={toggleMessage}>
+        {isVisible ? "Hide Message" : "Show Message"}
+      </button>
+      {isVisible && <p>Hello, React!</p>}
+    </div>
+  );
 }
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Form Validation</title>
-    <style>
-        .error { color: red; }
-        .success { color: green; }
-    </style>
-</head>
-<body>
-
-<h2>User Information Form</h2>
-<p><span class="error">* required field</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" value="<?php echo $name; ?>">
-    <span class="error">* <?php echo $nameErr; ?></span>
-    <br><br>
-
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" value="<?php echo $email; ?>">
-    <span class="error">* <?php echo $emailErr; ?></span>
-    <br><br>
-
-    <label for="age">Age:</label>
-    <input type="text" id="age" name="age" value="<?php echo $age; ?>">
-    <span class="error">* <?php echo $ageErr; ?></span>
-    <br><br>
-
-    <input type="submit" value="Submit">
-</form>
-
-<?php
-if (!empty($successMessage)) {
-    echo "<p class='success'>$successMessage</p>";
-}
-?>
-
-</body>
-</html>
+export default App;
