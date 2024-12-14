@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+</head>
+<body>
+
+    <h1>Product Form</h1>
+    <form id="productForm">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName"><br><br>
+
+        <label for="productCode">Product Code:</label>
+        <input type="text" id="productCode" name="productCode"><br><br>
+
+        <label for="productImg">Product Image URL:</label>
+        <input type="text" id="productImg" name="productImg"><br><br>
+
+        <label for="UnitPrice">Unit Price:</label>
+        <input type="number" id="UnitPrice" name="UnitPrice"><br><br>
+
+        <label for="Qty">Quantity:</label>
+        <input type="number" id="Qty" name="Qty"><br><br>
+
+        <label for="TotalPrice">Total Price:</label>
+        <input type="number" id="TotalPrice" name="TotalPrice"><br><br>
+
+        <button type="button" onclick="SendDataToBackEnd()">Submit</button>
+
+        <h1 id="mydata"></h1>
+    </form>
+
+    <script>
+        async function SendDataToBackEnd() {
+            let ProductName = document.getElementById("productName").value;
+            let ProductCode = document.getElementById("productCode").value;
+            let Img = document.getElementById("productImg").value;
+            let UnitPrice = document.getElementById("UnitPrice").value;
+            let Qty = document.getElementById("Qty").value;
+            let TotalPrice = document.getElementById("TotalPrice").value;
+
+            let data = {
+                ProductName: ProductName,
+                productCode: ProductCode,
+                Img: Img,
+                UnitPrice: UnitPrice,
+                Qty: Qty,
+                TotalPrice: TotalPrice
+            };
+ let URL='https://crud.teamrabbil.com/api/v1/CreateProduct'
+
+ await fetch(URL, {
+                method: 'POST',
+                body: JSON.stringify(data)
+            });
+
+            alert("Data has been sent to the server");
+          
+        }
+    </script>
+
+</body>
+</html>
