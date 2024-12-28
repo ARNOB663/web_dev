@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: poppins;
+  background-color: #E2DFD0;
+}
+
+.material-icons {
+  color: #E2DFD0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 15px;
+  background-color: #32012F;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__left img {
+  width: 100px;
+  margin-left: 15px;
+}
+
+.header i {
+  padding: 0 7px;
+  cursor: pointer;
+}
+
+.header__search form {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  height: 35px;
+  background-color: #524C42;
+}
+
+.header__search input {
+  width: 500px;
+  padding: 10px;
+  border: none;
+  background-color: #E2DFD0;
+  color: #32012F;
+}
+
+.header__search button {
+  padding: 0;
+  border: none;
+  background-color: #F97300;
+  color: #E2DFD0;
+}
+
+.mainBody {
+  display: flex;
+  height: calc(100vh - 70px);
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 230px;
+  background-color: #524C42;
+  overflow-y: auto;
+}
+
+.sidebar__categories {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.sidebar__category {
+  display: flex;
+  align-items: center;
+  padding: 12px 25px;
+  color: #E2DFD0;
+}
+
+.sidebar__category:hover {
+  background-color: #F97300;
+  cursor: pointer;
+}
+
+hr {
+  height: 1px;
+  background-color: #e5e5e5;
+  border: none;
+}
+
+.videos {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.videos__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #32012F;
+  color: #E2DFD0;
+}
+
+.video {
+  width: 310px;
+  margin-bottom: 30px;
+}
+
+.video__thumbnail {
+  width: 100%;
+  height: 170px;
+}
+
+.video__thumbnail img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.author img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.video__details {
+  display: flex;
+  margin-top: 10px;
+  color: #E2DFD0;
+}

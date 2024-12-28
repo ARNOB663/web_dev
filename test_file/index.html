@@ -1,0 +1,20 @@
+import React, { useState } from "react";
+
+function App() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleMessage = () => {
+    setIsVisible((prevState) => !prevState);
+  };
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <button onClick={toggleMessage}>
+        {isVisible ? "Hide Message" : "Show Message"}
+      </button>
+      {isVisible && <p>Hello, React!</p>}
+    </div>
+  );
+}
+
+export default App;
